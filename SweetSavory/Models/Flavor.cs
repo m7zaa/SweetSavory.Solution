@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-
 namespace SweetSavory.Models
 {
     public class Flavor
@@ -8,10 +7,8 @@ namespace SweetSavory.Models
         {
             this.Treats = new HashSet<FlavorTreat>();
         }
-
         public int FlavorId { get; set; }
         public string FlavorName { get; set; }
-
         public virtual ICollection<FlavorTreat> Treats { get; set; }
     }
 }
