@@ -1,5 +1,8 @@
 @model SweetSavory.Models.Flavor;
 @using SweetSavory.Models;
+@{
+    ViewData["Title"] = @Model.FlavorName + " Details";
+}
 <h2>Flavor: @Html.DisplayFor(model => model.FlavorName)</h2>
 <hr />
 <h4>Related Treats:</h4>

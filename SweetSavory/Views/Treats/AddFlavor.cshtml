@@ -1,4 +1,7 @@
 @model SweetSavory.Models.Treat
+@{
+    ViewData["Title"] = "Add Flavor";
+}
 <h2>Add a flavor</h2>
 <h4>Add aflavor for this treat: @Html.DisplayFor(model => model.TreatName)</h4>
 @using (Html.BeginForm())

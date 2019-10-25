@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System;
 namespace SweetSavory.Models
 {
     public class Treat
@@ -10,6 +9,8 @@ namespace SweetSavory.Models
         }
         public int TreatId { get; set; }
         public string TreatName { get; set; }
+        public string TreatDescription { get; set; }
+
         public ICollection<FlavorTreat> Flavors { get; }
     }
 }

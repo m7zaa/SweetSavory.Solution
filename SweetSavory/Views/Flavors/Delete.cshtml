@@ -1,5 +1,8 @@
 @model SweetSavory.Models.Flavor;
 @using SweetSavory.Models;
+@{
+    ViewData["Title"] = "Delete "+ @Model.FlavorName + "?";
+}
 <h2>Are you sure you want to remove this flavor?</h2>
 Flavor: @Html.DisplayFor(model => model.FlavorName)
 @using (Html.BeginForm())

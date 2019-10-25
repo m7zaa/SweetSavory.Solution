@@ -1,5 +1,8 @@
 @using SweetSavory.Models;
 @model List<SweetSavory.Models.Flavor>;
+@{
+    ViewData["Title"] = "Flavors";
+}
 <h1>Flavors</h1>
 <hr>
 @if (@Model.Count == 0)

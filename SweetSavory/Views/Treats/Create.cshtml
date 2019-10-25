@@ -1,11 +1,19 @@
 @model SweetSavory.Models.Treat
+@{
+    ViewData["Title"] = "New Treat";
+}
 <h4>Add a new Treat</h4>
 @using (Html.BeginForm())
 {
-    <label for="TreatTitle">Treat Name:</label>
+    <label for="TreatName">Treat Name:</label>
     @Html.TextBoxFor(model => model.TreatName)
+
+    <p><label for="TreatDescription">Treat Description:</label>  
+    @Html.TextBoxFor(model => model.TreatDescription)</p>
     @Html.Label("Select Flavor")
     @Html.DropDownList("FlavorId")
-    <input type="submit" value="Add new Treat" class="btn btn-primary" />
+    <p><input type="submit" value="Add new Treat" class="btn btn-primary" /></p>
+
+
 }
 <p>Flavor unavailable? @Html.ActionLink("Add new flavor", "Create", "Flavors", new { @class = "btn btn-primary" })</p>
