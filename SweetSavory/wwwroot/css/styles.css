@@ -57,7 +57,9 @@ body {
 .container {
   display: flex;
 }
-
+.text-center {
+  float: center;
+}
 .login {
 float: right;
 }
