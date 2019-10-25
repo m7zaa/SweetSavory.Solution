@@ -9,6 +9,6 @@
     @Html.HiddenFor(model => model.FlavorId)
     @Html.LabelFor(model => model.FlavorName)
     @Html.TextBoxFor(model => model.FlavorName)
-    <input type="submit" value="Save Changes" />
+    <input type="submit" class = "btn btn-primary" value="Save Changes" />
 }
-<p>@Html.ActionLink("Go back to all Treats", "Index")</p>
+<p>@Html.ActionLink("Go back to all Treats", "Index", new { @class = "btn btn-primary" })</p>

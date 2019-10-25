@@ -8,5 +8,6 @@
     @Html.DropDownList("TreatId")
     <input type="submit" value="Save" />
 }
-<p>Treat unavailable? @Html.ActionLink("Add new treat", "Create", "Treats")</p>
-<p>@Html.ActionLink("Back to Flavors", "Index")</p>
+<p>Treat unavailable? @Html.ActionLink("Add new treat", "Create", "Treats", new { @class = "btn btn-primary" })</p>
+<p>@Html.ActionLink("Back to Flavors", "Index", new { @class = "btn btn-primary" })</p>
+

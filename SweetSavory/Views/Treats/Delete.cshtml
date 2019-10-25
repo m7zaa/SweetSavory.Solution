@@ -4,6 +4,6 @@
 Treat Name: @Html.DisplayFor(model => model.TreatName)
 @using (Html.BeginForm())
 {
-    <input type="submit" value="Delete" />
+    <input type="submit" value="Delete" class = "btn btn-primary"/>
 }
-@Html.ActionLink("Back to List", "Index")
+@Html.ActionLink("Back to List", "Index", new { @class = "btn btn-primary" })

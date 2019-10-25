@@ -5,6 +5,7 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
 </div>
+<hr>
 <h2>Treats</h2>
 @if (@ViewBag.Treats.Count == 0)
 {
@@ -15,6 +16,7 @@
 {
   <p>@Html.ActionLink($"{treat.TreatName}", "Details", "Treats", new { id = treat.TreatId})</p>
 }
+<hr>
 <h2>Flavors</h2>
 @if (@ViewBag.Flavors.Count == 0)
 {

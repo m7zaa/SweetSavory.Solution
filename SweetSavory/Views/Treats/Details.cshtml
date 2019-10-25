@@ -1,12 +1,16 @@
 @model SweetSavory.Models.Treat;
 @using SweetSavory.Models;
-<h2>Treat Details</h2>
+<h2>@Html.DisplayFor(model => model.TreatName) Details</h2>
 <hr />
-<h3>Treat: @Html.DisplayFor(model => model.TreatName)</h3>
+
 @foreach(var join in Model.Flavors)
 {
 <h3>Flavor: @Html.ActionLink($"{@join.Flavor.FlavorName}", "Details", "Flavors", new {id = @join.FlavorId })</h3>
     
 } 
+
+@if (@ViewBag.Flavors.Count == 0)
+{
 <p>Flavor missing?</p>
-<p>@Html.ActionLink("Add Flavor", "AddFlavor", new { id = Model.TreatId })</p>
+<p>@Html.ActionLink("Add Flavor", "AddFlavor", new { id = Model.TreatId }, new { @class = "btn btn-primary" })</p>
+}

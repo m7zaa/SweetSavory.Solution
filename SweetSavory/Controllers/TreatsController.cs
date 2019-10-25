@@ -34,6 +34,7 @@ namespace SweetSavory.Controllers
             .Include(Treat => Treat.Flavors)
             .ThenInclude(join => join.Flavor)
             .FirstOrDefault(treat => treat.TreatId == id);
+            ViewBag.Flavors = _db.Flavors.ToList();
             return View(thisTreat);
         }
         public ActionResult Create()

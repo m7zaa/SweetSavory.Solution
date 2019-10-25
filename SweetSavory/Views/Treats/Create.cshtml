@@ -6,6 +6,6 @@
     @Html.TextBoxFor(model => model.TreatName)
     @Html.Label("Select Flavor")
     @Html.DropDownList("FlavorId")
-    <input type="submit" value="Add new Treat" class="btn btn-default" />
+    <input type="submit" value="Add new Treat" class="btn btn-primary" />
 }
-<p>Flavor unavailable? @Html.ActionLink("Add new flavor", "Create", "Flavors")</p>
+<p>Flavor unavailable? @Html.ActionLink("Add new flavor", "Create", "Flavors", new { @class = "btn btn-primary" })</p>

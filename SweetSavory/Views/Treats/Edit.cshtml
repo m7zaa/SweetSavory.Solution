@@ -8,6 +8,6 @@
     @Html.HiddenFor(model => model.TreatId)
     @Html.LabelFor(model => model.TreatName)
     @Html.TextBoxFor(model => model.TreatName)
-    <input type="submit" value="Save Changes" />
+    <input type="submit" value="Save Changes" class = "btn btn-primary" />
 }
-<p>@Html.ActionLink("Go back to all Treats", "Index")</p>
+<p>@Html.ActionLink("Go back to all Treats", "Index", new { @class = "btn btn-primary" })</p>
