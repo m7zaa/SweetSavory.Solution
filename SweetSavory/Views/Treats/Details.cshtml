@@ -3,7 +3,7 @@
 
 <h2>Treat Details</h2>
 <hr />
-<h3>Name: @Html.DisplayFor(model => model.TreatName)</h3>
+<h3>Treat: @Html.DisplayFor(model => model.TreatName)</h3>
 
 @foreach(var join in Model.Flavors)
 {
@@ -11,4 +11,5 @@
     
 } 
 
-<p>@Html.ActionLink("Add Flavor", "AddFlavor", new { id = Model.TreatId })</p>
+    <p>Flavor missing?</p>
+    <p>@Html.ActionLink("Add Flavor", "AddFlavor", new { id = Model.TreatId })</p>

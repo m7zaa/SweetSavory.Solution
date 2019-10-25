@@ -1,0 +1,21 @@
+@model SweetSavory.Models.Flavor;
+@{
+    ViewData["Title"] = "Edit "+ @Model.FlavorName;
+    Layout = "_Layout";
+}
+
+<h3>Edit @Model.FlavorName</h3>
+
+@using (Html.BeginForm())
+{
+
+    @Html.HiddenFor(model => model.FlavorId)
+
+    @Html.LabelFor(model => model.FlavorName)
+    @Html.TextBoxFor(model => model.FlavorName)
+
+
+    <input type="submit" value="Save Changes" />
+}
+
+<p>@Html.ActionLink("Go back to all Treats", "Index")</p>

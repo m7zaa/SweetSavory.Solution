@@ -11,7 +11,11 @@
 <h2>Treats</h2>
 @foreach (Treat treat in Model)
 {
-  <li>@Html.ActionLink($"{treat.TreatName}", "Details", "Treats", new { id = treat.TreatId})</li>
+  <p>@Html.ActionLink($"{treat.TreatName}", "Details", "Treats", new { id = treat.TreatId})</p>
 }
 
-
+<!-- @*<h2>Flavors</h2>
+@foreach (Flavor flavor in Model)
+{
+  <li>@Html.ActionLink($"{flavor.FlavorName}", "Details", "Flavors", new { id = flavor.FlavorId})</li>
+}*@ -->
