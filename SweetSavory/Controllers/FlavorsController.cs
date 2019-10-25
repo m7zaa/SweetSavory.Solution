@@ -18,6 +18,9 @@ namespace SweetSavory.Controllers
     {
         private readonly SweetSavoryContext _db;
 
+
+
+
         public FlavorsController(SweetSavoryContext db)
         {
             _db = db;
@@ -28,7 +31,13 @@ namespace SweetSavory.Controllers
             List<Flavor> model = _db.Flavors.ToList();
             return View(model);
         }
-
+        // public async Task<ActionResult> Index()
+        // {
+        //     var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        //     var currentUser = await _userManager.FindByIdAsync(userId);
+        //     var userFlavors = _db.Flavors.Where(entry => entry.User.Id == currentUser.Id);
+        //     return View(userFlavors);
+        // }
         public ActionResult Create()
         {
             return View();
