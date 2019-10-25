@@ -2,6 +2,41 @@
     ViewData["Title"] = "Welcome, Pierre";
 }
 
+@model SweetSavory.Models.FlavorTreat;
+
+@using SweetSavory.Models;
+
+
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
 </div>
+
+
+<h1>Flavors</h1>
+<ul>
+
+<!-- @* @if (@Model.Count == 0)
+{
+  <h3>No flavors have been added yet!</h3>
+} *@ -->
+
+@foreach (var join in Model.Treat)
+{
+  <li>@Html.ActionLink($"{@ViewBag.TreatName}", "Details", new { id = @ViewBag.TreatId}) | @Html.ActionLink("remove this Treat", "Delete", new { id = @ViewBag.TreatId})</li>
+}
+
+
+<h1>Treats</h1>
+
+<!-- @* @if (@Model.Count == 0)
+{
+  <h3>No treats have been added yet!</h3>
+} *@ -->
+
+<!-- @*@foreach (var join in Model.Treats)
+{
+  <li>@Html.ActionLink($"{@join.Treat.TreatName}", "Details", new { id = @join.TreatId}) | @Html.ActionLink("remove this Treat", "Delete", new { id = @join.TreatId})</li>
+}*@ -->
+
+</ul>
