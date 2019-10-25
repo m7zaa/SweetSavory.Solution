@@ -33,8 +33,9 @@ namespace SweetSavory.Controllers
         [HttpGet("/")]
         public ActionResult Index()
         {
-
-            return View(_db.Treats.ToList());
+            ViewBag.Treats = _db.Treats.ToList();
+            ViewBag.Flavors = _db.Flavors.ToList();
+            return View();
         }
     }
 }
