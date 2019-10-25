@@ -1,14 +1,14 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Registrar.Models
+namespace SweetSavory.Models
 {
-    public class RegistrarContext : IdentityDbContext<ApplicationUser>
+    public class SweetSavoryContext : IdentityDbContext<ApplicationUser>
     {
-        public virtual DbSet<Course> Courses { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<CourseStudent> CourseStudent { get; set; }
+        public virtual DbSet<Flavor> Flavors { get; set; }
+        public DbSet<Treat> Treats { get; set; }
+        public DbSet<FlavorTreat> FlavorTreat { get; set; }
 
-        public RegistrarContext(DbContextOptions options) : base(options) { }
+        public SweetSavoryContext(DbContextOptions options) : base(options) { }
     }
 }

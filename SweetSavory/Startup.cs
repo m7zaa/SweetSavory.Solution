@@ -18,7 +18,6 @@ namespace SweetSavory
                 .AddJsonFile("appsettings.json");
             Configuration = builder.Build();
         }
-
         public IConfigurationRoot Configuration { get; set; }
 
         public void ConfigureServices(IServiceCollection services)
@@ -29,19 +28,16 @@ namespace SweetSavory
               .AddDbContext<SweetSavoryContext>(options => options
               .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
 
-            //new code
             services.AddIdentity<ApplicationUser, IdentityRole>()
                       .AddEntityFrameworkStores<SweetSavoryContext>()
                       .AddDefaultTokenProviders();
         }
-
         public void Configure(IApplicationBuilder app)
         {
             app.UseStaticFiles();
 
             app.UseDeveloperExceptionPage();
 
-            //new code
             app.UseAuthentication();
 
             app.UseMvc(routes =>
