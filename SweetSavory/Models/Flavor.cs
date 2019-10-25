@@ -11,7 +11,6 @@ namespace SweetSavory.Models
 
         public int FlavorId { get; set; }
         public string FlavorName { get; set; }
-        public string FlavorNumber { get; set; }
 
         public virtual ICollection<FlavorTreat> Treats { get; set; }
     }
